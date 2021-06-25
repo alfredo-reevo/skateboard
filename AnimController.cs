@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,9 +20,11 @@ public class AnimController : MonoBehaviour
         {
             anim.Play("Skateboarding-Move");
         }
+
         if (Input.GetKeyUp("w"))
         {
-            anim.Play("Skateboarding-idle");
-        }
+            anim.CrossFade("Skateboarding-idle", 0.6f);
+        }     
+
     }
 }
